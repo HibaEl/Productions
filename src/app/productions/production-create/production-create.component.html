@@ -1,0 +1,60 @@
+<div class="card">
+<div class="card-header">CEATION PRODUCTION</div>
+  <div class="card-body">
+<div class="card">
+    <div class="form-group">
+      <label>Reference</label>
+        <input type="text" [(ngModel)]="production.reference" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label>Poids</label>
+        <input type="number" [(ngModel)]="production.poids" class="form-control"/>
+  </div>
+
+    <div class="form-group">
+      <label>nbr de Mort</label>
+          <input type="number" [(ngModel)]="production.nbrMort" class="form-control"/>
+        </div>
+
+    <div class="form-group">
+      <label>nbr d'Oeuf</label>
+        <input type="number" [(ngModel)]="production.nbrOeuf" class="form-control"/>
+      </div>
+
+    <div class="form-group">
+      <label>nbr des Poussins Female</label>
+        <input type="number" [(ngModel)]="production.nbrPoussinFemale" class="form-control"/>
+      </div>
+
+    <div class="form-group">
+      <label>nbr des Poussins Male</label>
+        <input type="number" [(ngModel)]="production.nbrPoussinMale" class="form-control"/>
+      </div>
+
+
+    <div class="form-group">
+      <label>reference Firme</label>
+        <input type="text" [(ngModel)]="production.refFirme" class="form-control"/>
+      </div>
+
+    <div class="form-group">
+      <label>reference Evolution</label>
+        <input type="text" [(ngModel)]="production.refEvolution" class="form-control"/>
+      </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" [(ngModel)]="production.dateProduction" class="form-control"/>
+    </div>
+</div>
+
+
+    <div class="card-footer">
+    <button (click)="saveProduction()" class="btn btn-outline-dark" >SAVE</button>
+    </div>
+  </div>
+
+
+</div>
+

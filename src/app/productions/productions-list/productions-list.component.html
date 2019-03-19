@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <label>reference Firme :</label>
+    <input type="text" [(ngModel)]="rechercheProduction.refFirme" />
+    <label>Semaine :</label>
+    <input type="number" [(ngModel)]="rechercheProduction.semaine"/>
+    <label>Année :</label>
+    <input type="number" [(ngModel)]="rechercheProduction.annee"/>
+    <button class="btn btn-outline-dark" (click)="findByRefFirmeAndSemaineProductionAndAnneeProduction()
+" >Find</button>
+    <br><br>
+    <table class="table table-hover table-hover">
+      <thead><th>reference</th> <th>poids</th><th>nbrPoussinMale</th>
+      <th>nbrPoussinFemale</th><th>nbrOeuf</th><th>nbrMort</th><th>dateProduction</th><th>refFirme</th><th>refEvolution</th> </thead>
+      <tbody>
+      <tr *ngFor="let d of productions">
+        <td>{{d.reference}}</td>
+        <td>{{d.poids}}</td>
+        <td>{{d.nbrPoussinMale}}</td>
+        <td>{{d.nbrPoussinFemale}}</td>
+        <td>{{d.nbrOeuf}}</td>
+        <td>{{d.nbrMort}}</td>
+        <td>{{d.dateProduction}}</td>
+        <td>{{d.refFirme}}</td>
+        <td>{{d.refEvolution}}</td>
+      </tr></tbody>
+    </table>
+    <br><br>
+    <div align="center">
+    <Label>  Moyen du poids : </Label>
+    <input type="number" [(ngModel)]="moyPoid"  />
+    <br> <br>
+
+    <Label>  Moyen du nbr d'oeuf : </Label>
+    <input type="number" [(ngModel)]="moyNbrO" />
+  </div></div>
+</div>
