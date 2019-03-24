@@ -19,6 +19,7 @@ private myurl1 = 'http://localhost:8095/production/productions/recherche';
 private myproductions: Array<Production>;
   private myproductions1: Array<Production>;
   private myselectedProd: Production;
+  private myselectedProd1: Production;
 private imoyPoid: number;
 private imoyNbrO: number;
 
@@ -60,7 +61,19 @@ if (this.myselectedProd != null) {
       console.log('sorry');
     }
   );
-}
+}}
+ public deleteProduction(prod) {
+     this.myselectedProd1 = prod;
+     if (this.myselectedProd1 != null) {
+       this.http.delete(this.myurl + 'reference/' + this.myselectedProd1.reference).subscribe(
+         data => {
+           console.log('supprimer avec succés');
+         },
+         error5 => {
+           console.log('Error while deleting');
+         }
+       );
+     }
  }
 public findByRefFirmeAndSemaineProductionAndAnneeProduction() {
   this.http.post<Array<Production>>(this.myurl1, this.productionsList).subscribe(
@@ -164,4 +177,11 @@ public findByRefFirmeAndSemaineProductionAndAnneeProduction() {
   }
 
 
+  get selectedProd1(): Production {
+    return this.myselectedProd1;
+  }
+
+  set selectedProd1(value: Production) {
+    this.myselectedProd1 = value;
+  }
 }
