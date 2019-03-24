@@ -1,15 +1,36 @@
-<div class="jumbotron">
-  <h1 class="display-4 text-center">Gestion Du Production</h1>
+<div class="jumbotron" size="500" style="background-image: url(https://www.broeierij-lafaut.be/images/Home-slideshow/Home-slideshow-02.jpg); background-size: 100%;">
+  <div class="container for-about">
+    <div class="tt"> Gestion Des Productions</div>
+  </div>
 </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Production<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Import</a>
+      <a class="nav-item nav-link" href="#">Firme </a>
+      <a class="nav-item nav-link" href="#">Consommation </a>
+      <a class="nav-item nav-link" href="#">Vente </a>
+
+    </div>
+  </div>
+</nav>
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="nav-item nav-link active" id="nav-echelle-add" data-toggle="tab" href="#nav-tab" role="role" aria-controls="nav-home" aria-selected="true">Creation</a>
+    <a class="nav-item nav-link active" id="nav-echelle-add" data-toggle="tab" href="#nav-add" role="tab" aria-controls="nav-home" aria-selected="true">Creation</a>
   <a class="nav-item nav-link" id="nav-echelle-get" data-toggle="tab" href="#nav-get" role="tab" aria-controls="nav-contact" aria-selected="true">Synthése</a>
+    <a class="nav-item nav-link" id="nav-echelle-set" data-toggle="tab" href="#nav-set" role="tab" aria-controls="nav-Error" aria-selected="true">Comparaison</a>
+
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-add" role="tabpanel" aria-labelledby="nav-echelle-add"><app-production-create></app-production-create></div>
-<div class="tab-pane fade" id="nav-get" role="tabpanel" aria-labelledby="nav-echelle-get"><app-productions-list></app-productions-list></div>
+  <div class="tab-pane fade show active" id="nav-add" role="tabpanel" aria-labelledby="nav-echelle-add"><br><div align="center"><div class="col-md-7"><app-production-create></app-production-create></div></div></div>
+  <div class="tab-pane fade" id="nav-get" role="tabpanel" aria-labelledby="nav-echelle-get"><br><div align="center"><div class="col-md-10"><app-productions-list></app-productions-list></div></div></div>
+  <div class="tab-pane fade" id="nav-set" role="tabpanel" aria-labelledby="nav-echelle-set"><br><div align="center"><div class="col-md-11"><app-production-comparaison></app-production-comparaison></div></div></div>
+
+
 </div>
 
 

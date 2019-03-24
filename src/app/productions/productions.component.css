@@ -1,0 +1,11 @@
+.jumbotron {
+  margin-bottom: 0px;
+  height: 330px;
+  color: white; /* Le texte sera affiché en blanc */
+  text-shadow: black 0.4em 0.4em 0.4em;
+  background:transparent;
+  text-align: center;
+}
+.tt {
+  font-size: 100px;
+}

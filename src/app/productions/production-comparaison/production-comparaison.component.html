@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header thead-dark" >Les Tableau de Comparaison:</div>
+  <div class="card-body"><div class="alert alert-warning" role="alert">
+    Les Productions:
+  </div><table class="table table-hover table-hover">
+    <thead class="thead-dark"><th>reference</th> <th>poids</th><th>nbrPoussinMale</th>
+    <th>nbrPoussinFemale</th><th>nbrOeuf</th><th>nbrMort</th><th>dateProduction</th><th>refFirme</th><th>refEvolution</th><th>Action</th> </thead>
+    <tbody>
+    <tr *ngFor="let j of productions1">
+      <td>{{j.reference}}</td>
+      <td>{{j.poids}}</td>
+      <td>{{j.nbrPoussinMale}}</td>
+      <td>{{j.nbrPoussinFemale}}</td>
+      <td>{{j.nbrOeuf}}</td>
+      <td>{{j.nbrMort}}</td>
+      <td>{{j.dateProduction}}</td>
+      <td>{{j.refFirme}}</td>
+      <td>{{j.refEvolution}}</td>
+      <td><button (click)="findevolutionByProduction(j)" class="btn btn-sm btn-outline-info fa fa-plus"></button> </td>
+      <td><button class="btn btn-sm btn-outline-info fa fa-trash-o"></button> </td>
+    </tr></tbody>
+  </table>
+    <div class="alert alert-warning" role="alert">
+      Les évolutions:
+    </div>
+    <table class="table table-hover table-hover">
+      <thead class="thead-dark"><th>reference</th><th>poid</th><th>nbrOeuf</th> <th>semaine</th>
+      </thead>
+      <tbody>
+      <tr>
+        <td><input type="text" readonly class="form-control-plaintext" [(ngModel)]="productionComparaison.reference"></td>
+        <td><input type="text" readonly class="form-control-plaintext" [(ngModel)]="productionComparaison.poid"></td>
+        <td><input type="text" readonly class="form-control-plaintext" [(ngModel)]="productionComparaison.nbrOeuf"></td>
+        <td><input type="text" readonly class="form-control-plaintext" [(ngModel)]="productionComparaison.semaine"></td>
+      </tr></tbody>
+    </table>
+
+  </div></div>

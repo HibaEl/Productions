@@ -9,13 +9,15 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductionsListComponent } from './productions/productions-list/productions-list.component';
 import {RechercheProduction} from './controller/model/recherche-production.model';
+import { ProductionComparaisonComponent } from './productions/production-comparaison/production-comparaison.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductionsComponent,
     ProductionCreateComponent,
-    ProductionsListComponent
+    ProductionsListComponent,
+    ProductionComparaisonComponent
   ],
   imports: [
     BrowserModule,
