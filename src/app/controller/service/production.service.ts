@@ -66,7 +66,7 @@ if (this.myselectedProd != null) {
      this.myselectedProd1 = prod;
      if (this.myselectedProd1 != null) {
        this.http.delete(this.myurl + 'reference/' + this.myselectedProd1.reference).subscribe(
-         data => {
+         data1 => {
            console.log('supprimer avec succés');
          },
          error5 => {
