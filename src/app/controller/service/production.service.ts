@@ -31,8 +31,9 @@ constructor(private http: HttpClient) {}
 
  public saveProduction() {
    this.http.post<Production>(this.myurl, this.productionCreate).subscribe(data => {
-     console.log('ok');
-     this.productionCreate = new Production('', 0, 0, 0, 0, 0, '', '', '');
+       alert('Enregistrer avec succés');
+       console.log('ok');
+       this.productionCreate = new Production('', 0, 0, 0, 0, 0, '', '', '');
    }
 
    );
@@ -67,6 +68,7 @@ if (this.myselectedProd != null) {
      if (this.myselectedProd1 != null) {
        this.http.delete(this.myurl + 'reference/' + this.myselectedProd1.reference).subscribe(
          data1 => {
+           alert('supprimer avec succés');
            console.log('supprimer avec succés');
          },
          error5 => {
